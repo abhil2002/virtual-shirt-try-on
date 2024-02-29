@@ -1,0 +1,234 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="static/webPage/Logo.png" class="logo" alt="" width="190" height="100"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Shirts</a>
+                    <div class="dropdown-content">
+                        <a href="shirt.html">Men's Shirts</a>
+                        <a href="#">Women's Shirts</a>
+                    </div>
+                </li>
+                <li><a href="necklace.html">Necklace</a></li>
+                <li><a class="active" href="glass.html">Glasses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="static/glass_images/glass_7.png" width="100%" id="MainImg" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="static/glass_images/glass_7.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="static/glass_images/glass_7.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="static/glass_images/glass_7.png" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="static/glass_images/glass_7.png" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Home / T-Shirt</h6>
+            <h4>Men's Fashion T-Shirt</h4>
+            <h2>₹139</h2>
+            <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Small</option>
+                <option>Large</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Add To Cart</button>
+            <form action="{{ url_for('try_glass_image', image_name='glass_7.png') }}" method="get">
+                <button class="normal">Try The Product</button>
+            </form>
+            <h4>Product Details</h4>
+            <span>If you want to stay on top of the fashion trends, then you need to shop for the latest and trendiest
+                topwear from an e-commerce site Flipkart. Check out the amazing collection of topwear for women online
+                and select the ones that suit you the best. Browse through stylish women’s topwear that are offered by
+                popular brands, such as Only, Jockey, U&F, Darzi, Ann Springs, and more. </span>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>New Modern Design Collection</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="static/necklace_images/necklace_boys/necklace_b8.png" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Catoon Astonaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="static/necklace_images/necklace_boys/necklace_b12.png" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Catoon Astonaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="static/necklace_images/necklace_boys/necklace_b2.png" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Catoon Astonaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="static/necklace_images/necklace_boys/necklace_b6.png" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Catoon Astonaut T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹78</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newtext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail Updates about or latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="static/webPage/Logo.png" alt="" width="190" height="100">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>SKNCOE,Vadgaon,Pune-411052</p>
+            <p><strong>Phone: </strong>+91 0123456789</p>
+            <p><strong>Hours: </strong>10.00 - 10.00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow US</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinteresr-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Whislist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Store</p>
+            <div class="row">
+                <img src="static/webPage/app.jpg" alt="">
+                <img src="static/webPage/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="static/webPage/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>@ 2023, MARS etc - Eccomerce Webiste</p>
+        </div>
+    </footer>
+
+    <script>
+        var MainImg  = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function(){
+            MainImg.src = smallimg[3].src;
+        }
+    </script>
+</body>
+
+</html>

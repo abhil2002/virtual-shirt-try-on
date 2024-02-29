@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+
+<section>
+    <h1>Necklace Try-On</h1>
+    <form action="{{ url_for('try_image', image_name='necklace_g1.png') }}" method="get">
+        <button type="submit">TRY necklace1.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g2.png') }}" method="get">
+        <button type="submit">TRY necklace2.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g3.png') }}" method="get">
+        <button type="submit">TRY necklace3.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g4.png') }}" method="get">
+        <button type="submit">TRY necklace4.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g5.png') }}" method="get">
+        <button type="submit">TRY necklace5.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g6.png') }}" method="get">
+        <button type="submit">TRY necklace6.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g7.png') }}" method="get">
+        <button type="submit">TRY necklace7.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g8.png') }}" method="get">
+        <button type="submit">TRY necklace8.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g9.png') }}" method="get">
+        <button type="submit">TRY necklace9.png</button>
+    </form>
+    <form action="{{ url_for('try_image', image_name='necklace_g10.png') }}" method="get">
+        <button type="submit">TRY necklace10.png</button>
+    </form>
+    </section>
+
+</body>
+</html>
+
+# app.py
+import os
+from flask import Flask, render_template, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/try_image/<image_name>')
+def try_image(image_name):
+    path = f"static/necklace_images/necklace_girls/{image_name}"
+
+    # Write the path to a file
+    with open("path.txt", "w") as file:
+        file.write(path)
+
+    # Run the necklace.py script
+    os.system("python necklace.py")
+
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
